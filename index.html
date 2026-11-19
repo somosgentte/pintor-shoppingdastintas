@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clube do Pintor Parceiro | Shopping das Tintas Sapiranga</title>
+  <meta name="description" content="Programa de parceria para pintores autônomos e profissionais em Sapiranga/RS. Condição especial, balcão expresso, entrega na obra, estoque TOP 10 Killing RS e indicação de clientes." />
+
+  <!-- Open Graph para compartilhamento no WhatsApp dos pintores -->
+  <meta property="og:title" content="Shopping das Tintas PRO | Parceria para Pintores em Sapiranga" />
+  <meta property="og:description" content="Tempo parado na obra é dinheiro perdido. Ative sua credencial de Pintor Parceiro: condição especial, agilidade no balcão e indicação de obras." />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema.org LocalBusiness & FAQPage (SEO Local + IAs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeGoodsStore",
+        "name": "Shopping das Tintas - Programa Pintor Parceiro",
+        "description": "Loja parceira de pintores autônomos e profissionais em Sapiranga/RS. 16 anos de mercado, TOP 10 revendas Killing do Rio Grande do Sul, estoque completo e entrega ágil na obra.",
+        "telephone": "+55-51-99261-1901",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sapiranga",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "236"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Preciso ter CNPJ ou MEI para ser Pintor Parceiro do Shopping das Tintas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não! Atendemos pintores autônomos e profissionais liberais (CPF), MEIs e empresas de pintura. Basta fazer seu cadastro rápido pelo WhatsApp ou no balcão em Sapiranga."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona o Balcão Expresso e a entrega na obra em Sapiranga?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você envia a lista de materiais pelo WhatsApp (51) 99261-1901 e nossa equipe já deixa tudo separado para retirada sem fila ou combina a entrega direto na sua obra em Sapiranga e região."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O Shopping das Tintas indica clientes para pintores parceiros?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Clientes finais que compram tinta na loja frequentemente pedem indicação de pintores caprichosos e de confiança. Pintores parceiros ativos fazem parte da nossa rede de indicação."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fontes: Space Grotesk (Display Técnico/Industrial) + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#004282',
+              navyDark: '#002447',
+              ink: '#07111E',
+              surface: '#0E1C2F',
+              blue: '#1F78C1',
+              red: '#E1252B',
+              yellow: '#FBB024',
+              green: '#009A44',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Grade técnica sutil estilo planta/obra de fundo */
+    .blueprint-grid {
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    /* Gradiente fiel das 6 listras do pincel Shopping das Tintas */
+    .brand-stripes-bar {
+      background: linear-gradient(
+        90deg,
+        #1F78C1 0%, #1F78C1 16.66%,
+        #E1252B 16.66%, #E1252B 33.33%,
+        #FBB024 33.33%, #FBB024 50%,
+        #1F78C1 50%, #1F78C1 66.66%,
+        #009A44 66.66%, #009A44 83.33%,
+        #E1252B 83.33%, #E1252B 100%
+      );
+    }
+
+    /* Letreiro contínuo superior */
+    @keyframes marqueePro {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee-pro {
+      display: flex;
+      width: max-content;
+      animation: marqueePro 26s linear infinite;
+    }
+    .animate-marquee-pro:hover {
+      animation-play-state: paused;
+    }
+
+    /* Efeito metálico / brilho diagonal na Credencial VIP do Pintor */
+    .vip-card-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .vip-card-shine::after {
+      content: '';
+      position: absolute;
+      inset: -100% -50%;
+      background: linear-gradient(
+        115deg,
+        transparent 38%,
+        rgba(255, 255, 255, 0.14) 48%,
+        rgba(251, 176, 36, 0.18) 52%,
+        transparent 62%
+      );
+      transform: translateX(-40%);
+      transition: transform 0.7s ease;
+      pointer-events: none;
+    }
+    .vip-card-shine:hover::after {
+      transform: translateX(40%);
+    }
+
+    /* Sliders customizados do simulador de ganho de tempo */
+    input[type="range"].pro-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.15);
+      outline: none;
+    }
+    input[type="range"].pro-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #FBB024;
+      border: 4px solid #07111E;
+      box-shadow: 0 0 0 2px #FBB024;
+      cursor: pointer;
+    }
+    input[type="range"].pro-slider::-moz-range-thumb {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #FBB024;
+      border: 4px solid #07111E;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-ink text-slate-100 font-sans antialiased overflow-x-hidden pb-28 md:pb-24">
+
+  <!-- Barra de progresso de rolagem com as 6 cores da marca -->
+  <div class="fixed top-0 left-0 w-full h-1.5 z-50 bg-slate-900">
+    <div id="scroll-pro-bar" class="h-full brand-stripes-bar w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 1. FAIXA SUPERIOR CONTÍNUA (ALTO CONTRASTE INDUSTRIAL)                -->
+  <!-- ===================================================================== -->
+  <a href="#"
+     onclick="openWhatsAppPartnership('faixa_topo_pro'); return false;"
+     class="block bg-brand-yellow text-brand-ink overflow-hidden pt-2.5 pb-2 border-b border-black/15 hover:bg-amber-400 transition-colors cursor-pointer">
+    <div class="animate-marquee-pro text-xs sm:text-sm font-extrabold tracking-wide uppercase">
+      <div class="flex items-center gap-6 px-3">
+        <span>⚡ BALCÃO EXPRESSO PARA PINTORES EM SAPIRANGA</span>
+        <span class="opacity-40">///</span>
+        <span>CONDIÇÃO REAL DE PARCERIA (CPF, MEI OU CNPJ)</span>
+        <span class="opacity-40">///</span>
+        <span>ESTOQUE PRONTO + INDICAÇÃO DE OBRAS</span>
+        <span class="opacity-40">///</span>
+        <span class="bg-brand-ink text-brand-yellow px-2.5 py-0.5 rounded-md text-xs">ATIVAR PARCERIA NO WHATS →</span>
+        <span class="opacity-40">///</span>
+      </div>
+      <div class="flex items-center gap-6 px-3" aria-hidden="true">
+        <span>⚡ BALCÃO EXPRESSO PARA PINTORES EM SAPIRANGA</span>
+        <span class="opacity-40">///</span>
+        <span>CONDIÇÃO REAL DE PARCERIA (CPF, MEI OU CNPJ)</span>
+        <span class="opacity-40">///</span>
+        <span>ESTOQUE PRONTO + INDICAÇÃO DE OBRAS</span>
+        <span class="opacity-40">///</span>
+        <span class="bg-brand-ink text-brand-yellow px-2.5 py-0.5 rounded-md text-xs">ATIVAR PARCERIA NO WHATS →</span>
+        <span class="opacity-40">///</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HEADER PRO (IDENTIDADE FIEL + BADGE ÁREA DO PINTOR)                -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-1.5 z-40 px-3 sm:px-6 pt-3">
+    <div class="max-w-7xl mx-auto bg-brand-surface/90 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+
+      <!-- Logo Shopping das Tintas + Selo PRO -->
+      <a href="#topo" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-brand-navy border border-white/15 flex items-center justify-center shadow-lg shrink-0 group-hover:scale-105 transition-transform">
+          <svg viewBox="0 0 64 64" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 8 H24 V27 L20 29 Z" fill="#1F78C1"/>
+            <path d="M24 8 H28 V25 L24 27 Z" fill="#E1252B"/>
+            <path d="M28 8 H32 V23 L28 25 Z" fill="#FBB024"/>
+            <path d="M32 8 H36 V25 L32 23 Z" fill="#1F78C1"/>
+            <path d="M36 8 H40 V27 L36 25 Z" fill="#009A44"/>
+            <path d="M40 8 H44 V29 L40 27 Z" fill="#E1252B"/>
+            <path d="M16 32 L32 24.5 L48 32 L46 35 L32 28.5 L18 35 Z" fill="#FFFFFF"/>
+            <path d="M20 35.5 L32 30 L44 35.5 L43 39.5 C39 40.5 36.5 43.5 36.5 48 C36.5 52.5 35.5 56 32 58.5 C28.5 56 27.5 52.5 27.5 48 C27.5 43.5 25 40.5 21 39.5 Z" fill="#FFFFFF"/>
+            <circle cx="32" cy="52" r="2.2" fill="#004282"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="flex items-center gap-2">
+            <span class="font-display font-bold text-lg sm:text-xl text-white tracking-tight">Shopping</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-brand-yellow text-brand-ink">
+              PINTOR PRO
+            </span>
+          </div>
+          <span class="block text-[11px] font-bold tracking-[0.2em] text-slate-400 uppercase -mt-0.5">DAS TINTAS • 16 ANOS</span>
+        </div>
+      </a>
+
+      <!-- Navegação rápida Desktop -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
+        <a href="#vantagens" class="hover:text-brand-yellow transition-colors">Vantagens Reais</a>
+        <a href="#lista-expressa" class="hover:text-brand-yellow transition-colors">Lista Expressa</a>
+        <a href="#parceria" class="hover:text-brand-yellow transition-colors">Como Funciona</a>
+        <a href="#depoimentos" class="hover:text-brand-yellow transition-colors">Quem já é Parceiro</a>
+        <a href="#faq" class="hover:text-brand-yellow transition-colors">Dúvidas</a>
+      </nav>
+
+      <!-- CTAs Header -->
+      <div class="flex items-center gap-2">
+        <a href="#lista-expressa"
+           class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white bg-white/10 hover:bg-white/15 border border-white/10 transition-colors">
+          📋 Montar Lista
+        </a>
+        <button onclick="openWhatsAppExpress('header_balcao_expresso')"
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold text-brand-ink bg-brand-yellow hover:bg-amber-400 shadow-lg shadow-brand-yellow/20 transition-all active:scale-95">
+          <span>⚡ Balcão no Whats</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 3. HERO DISRUPTIVO: DE PROFISSIONAL PARA PROFISSIONAL + CREDENCIAL    -->
+  <!-- ===================================================================== -->
+  <section id="topo" class="relative blueprint-grid pt-10 sm:pt-14 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
+    <!-- Luzes sutis de fundo -->
+    <div class="pointer-events-none absolute -top-24 right-0 w-96 h-96 rounded-full bg-brand-blue/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 left-0 w-80 h-80 rounded-full bg-brand-yellow/10 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-10 items-center relative z-10">
+
+      <!-- Coluna Esquerda: Discurso Direto pro Profissional Liberal -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-brand-green/20 text-emerald-300 border border-emerald-400/30">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Programa Oficial • Sapiranga e Região
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white/5 border border-white/10 text-slate-200">
+            <span class="text-brand-yellow">★★★★★</span> 4,9 (236 avaliações)
+          </span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl xl:text-[54px] font-bold text-white leading-[1.06] tracking-tight">
+          O seu nome vai na parede.
+          <span class="text-brand-yellow block mt-1">A loja parceira garante o seu lucro.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl">
+          Quem vive de pintura sabe: <strong class="text-white">tempo parado esperando tinta é dinheiro perdido</strong> e material fraco faz você dar 4 demãos onde 2 resolviam. No Shopping das Tintas você é tratado como <strong class="text-white">sócio da obra</strong> — com condição diferenciada, agilidade no balcão e indicação de clientes.
+        </p>
+
+        <!-- 4 Pilares rápidos em pill -->
+        <div class="grid grid-cols-2 gap-3 max-w-lg pt-1">
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
+            <span class="text-xl">💰</span>
+            <div class="leading-tight">
+              <p class="text-xs font-extrabold text-white">Condição de Parceiro</p>
+              <p class="text-[11px] text-slate-400">Vantagem real p/ CPF ou MEI</p>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
+            <span class="text-xl">⚡</span>
+            <div class="leading-tight">
+              <p class="text-xs font-extrabold text-white">Sem Fila no Balcão</p>
+              <p class="text-[11px] text-slate-400">Pede no Whats e já retira</p>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
+            <span class="text-xl">🏆</span>
+            <div class="leading-tight">
+              <p class="text-xs font-extrabold text-white">TOP 10 Killing RS</p>
+              <p class="text-[11px] text-slate-400">Estoque cheio e tinta nova</p>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
+            <span class="text-xl">🤝</span>
+            <div class="leading-tight">
+              <p class="text-xs font-extrabold text-white">Indicação de Obras</p>
+              <p class="text-[11px] text-slate-400">Clientes pedem pintor todo dia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTAs Principais -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="#lista-expressa"
+             class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white hover:bg-slate-100 text-brand-ink font-extrabold text-sm sm:text-base transition-all active:scale-95">
+            <span>📋 Mandar Lista de Obra Agora</span>
+          </a>
+          <button onclick="openWhatsAppPartnership('hero_btn_parceiro')"
+                  class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-brand-green hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-brand-green/25 transition-all hover:-translate-y-0.5 active:scale-95">
+            <span>Quero ser Pintor Parceiro →</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: GERADOR INTERATIVO DE CREDENCIAL VIP DO PINTOR -->
+      <div class="lg:col-span-6">
+        <div class="bg-brand-surface border border-white/15 rounded-3xl p-5 sm:p-6 shadow-2xl relative">
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-brand-yellow flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-yellow"></span>
+              Emita sua Credencial de Parceiro
+            </span>
+            <span class="text-[11px] font-bold text-slate-400">Grátis • 15 segundos</span>
+          </div>
+
+          <!-- CARTÃO VIP DIGITAL INTERATIVO -->
+          <div id="vip-card" class="vip-card-shine rounded-2xl bg-gradient-to-br from-brand-navy via-brand-navyDark to-slate-950 border border-white/20 p-5 sm:p-6 shadow-2xl relative">
+            <!-- Faixa das 6 cores no topo do cartão -->
+            <div class="absolute top-0 left-0 right-0 h-2 brand-stripes-bar"></div>
+
+            <!-- Cabeçalho do Cartão -->
+            <div class="flex items-start justify-between gap-3 pt-1">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center">
+                  <svg viewBox="0 0 64 64" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 8 H24 V27 L20 29 Z" fill="#1F78C1"/>
+                    <path d="M24 8 H28 V25 L24 27 Z" fill="#E1252B"/>
+                    <path d="M28 8 H32 V23 L28 25 Z" fill="#FBB024"/>
+                    <path d="M32 8 H36 V25 L32 23 Z" fill="#1F78C1"/>
+                    <path d="M36 8 H40 V27 L36 25 Z" fill="#009A44"/>
+                    <path d="M40 8 H44 V29 L40 27 Z" fill="#E1252B"/>
+                    <path d="M16 32 L32 24.5 L48 32 L46 35 L32 28.5 L18 35 Z" fill="#FFFFFF"/>
+                    <path d="M20 35.5 L32 30 L44 35.5 L43 39.5 C39 40.5 36.5 43.5 36.5 48 C36.5 52.5 35.5 56 32 58.5 C28.5 56 27.5 52.5 27.5 48 C27.5 43.5 25 40.5 21 39.5 Z" fill="#FFFFFF"/>
+                    <circle cx="32" cy="52" r="2.2" fill="#004282"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-display font-bold text-sm text-white leading-none">SHOPPING DAS TINTAS</p>
+                  <p class="text-[10px] font-bold tracking-widest text-brand-yellow uppercase mt-1">CLUBE PINTOR PARCEIRO</p>
+                </div>
+              </div>
+
+              <!-- Chip estilo cartão black -->
+              <div class="w-10 h-7 rounded-md bg-gradient-to-br from-amber-200 via-yellow-400 to-amber-600 border border-amber-100/50 opacity-90 flex items-center justify-center">
+                <div class="w-6 h-4 border border-black/25 rounded-sm"></div>
+              </div>
+            </div>
+
+            <!-- Dados Dinâmicos do Pintor no Cartão -->
+            <div class="mt-7 mb-5">
+              <p class="text-[10px] uppercase tracking-widest text-blue-200/70 font-bold">Profissional Credenciado</p>
+              <p id="card-painter-name" class="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight truncate mt-0.5">
+                SEU NOME AQUI
+              </p>
+              <div class="flex flex-wrap items-center gap-2 mt-2">
+                <span id="card-specialty-badge" class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-extrabold bg-brand-yellow/20 text-brand-yellow border border-brand-yellow/40">
+                  Pintura Residencial
+                </span>
+                <span id="card-city-badge" class="text-xs font-semibold text-blue-200/80">
+                  • Sapiranga e Região
+                </span>
+              </div>
+            </div>
+
+            <!-- Rodapé do Cartão -->
+            <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px]">
+              <span class="font-mono text-blue-200/70">STATUS: <strong class="text-emerald-400">PRÉ-APROVADO</strong></span>
+              <span class="font-bold text-white/90">16 ANOS • TOP 10 KILLING RS</span>
+            </div>
+          </div>
+
+          <!-- Inputs rápidos para personalizar a credencial na hora -->
+          <div class="mt-5 space-y-3.5">
+            <div>
+              <label for="input-painter-name" class="block text-xs font-bold text-slate-300 mb-1.5">
+                Digite seu nome (ou nome da sua equipe):
+              </label>
+              <input id="input-painter-name"
+                     type="text"
+                     maxlength="32"
+                     placeholder="Ex: João Silva Pinturas"
+                     oninput="updateVipCard()"
+                     class="w-full px-4 py-3 rounded-xl bg-brand-ink border border-white/15 focus:border-brand-yellow focus:outline-none text-white font-semibold placeholder:text-slate-500 text-sm transition-colors" />
+            </div>
+
+            <div>
+              <span class="block text-xs font-bold text-slate-300 mb-1.5">Qual sua principal atuação?</span>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="specialty-chips">
+                <button type="button" onclick="setSpecialty('Pintura Residencial')" data-spec="Pintura Residencial"
+                        class="spec-btn px-2.5 py-2 rounded-xl text-xs font-bold border border-brand-yellow bg-brand-yellow/15 text-brand-yellow transition-all">
+                  Residencial
+                </button>
+                <button type="button" onclick="setSpecialty('Predial / Fachada')" data-spec="Predial / Fachada"
+                        class="spec-btn px-2.5 py-2 rounded-xl text-xs font-bold border border-white/10 bg-white/5 text-slate-300 hover:border-white/30 transition-all">
+                  Fachada
+                </button>
+                <button type="button" onclick="setSpecialty('Textura & Efeitos')" data-spec="Textura & Efeitos"
+                        class="spec-btn px-2.5 py-2 rounded-xl text-xs font-bold border border-white/10 bg-white/5 text-slate-300 hover:border-white/30 transition-all">
+                  Efeitos
+                </button>
+                <button type="button" onclick="setSpecialty('Comercial / Obra')" data-spec="Comercial / Obra"
+                        class="spec-btn px-2.5 py-2 rounded-xl text-xs font-bold border border-white/10 bg-white/5 text-slate-300 hover:border-white/30 transition-all">
+                  Comercial
+                </button>
+              </div>
+            </div>
+
+            <button onclick="openWhatsAppCard()"
+                    class="w-full py-4 px-5 rounded-xl bg-brand-yellow hover:bg-amber-400 text-brand-ink font-extrabold text-sm sm:text-base shadow-lg shadow-brand-yellow/20 flex items-center justify-center gap-2 transition-all active:scale-95">
+              <span>🔓 Ativar minha Credencial no WhatsApp</span>
+              <span>→</span>
+            </button>
+            <p class="text-[11px] text-center text-slate-400">
+              Sem burocracia, sem taxa e funciona tanto para <strong>autônomo (CPF)</strong> quanto MEI/CNPJ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. A REALIDADE DO PINTOR AUTÔNOMO (4 DORES QUE A GENTE RESOLVE)       -->
+  <!-- ===================================================================== -->
+  <section id="vantagens" class="py-16 sm:py-24 px-4 sm:px-6 bg-slate-950 border-y border-white/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Papo reto de obra</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-1.5 leading-tight">
+            Você trabalha por conta. Não pode depender de loja que te atrasa.
+          </h2>
+        </div>
+        <p class="text-sm text-slate-400 max-w-md">
+          No Shopping das Tintas, 40% da nossa história foi construída lado a lado com pintores de Sapiranga. A gente entende exatamente onde o calo aperta.
+        </p>
+      </div>
+
+      <!-- Bento Grid Disruptivo de Vantagens Reais -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Card 1 -->
+        <div class="bg-brand-surface rounded-3xl p-6 border border-white/10 hover:border-brand-yellow/50 transition-colors flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-yellow/15 text-brand-yellow flex items-center justify-center text-2xl mb-5">⏱️</div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">01 • Agilidade</span>
+            <h3 class="font-display text-xl font-bold text-white mt-1 mb-2">
+              Chegou, pegou, voltou pra obra.
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Manda a lista no WhatsApp antes de sair da obra. Quando você encosta na loja, as latas e acessórios já estão separados — ou entregamos direto no endereço do seu cliente.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10 text-xs font-bold text-brand-yellow">
+            Mais horas pintando, menos horas no trânsito
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-brand-surface rounded-3xl p-6 border border-white/10 hover:border-brand-blue/60 transition-colors flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-blue/20 text-sky-400 flex items-center justify-center text-2xl mb-5">🎯</div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">02 • Rendimento Real</span>
+            <h3 class="font-display text-xl font-bold text-white mt-1 mb-2">
+              Cobertura que bota lucro no seu bolso.
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Quando o cliente compra tinta aguada, quem perde 1 dia extra dando demão é você. Trabalhamos com linhas de alta cobertura (incluindo Killing, onde somos TOP 10 RS) que fecham rápido e limpo.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10 text-xs font-bold text-sky-400">
+            Menos demãos = entrega mais rápida
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-brand-surface rounded-3xl p-6 border border-white/10 hover:border-brand-green/60 transition-colors flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-green/20 text-emerald-400 flex items-center justify-center text-2xl mb-5">🧪</div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">03 • Precisão na Cor</span>
+            <h3 class="font-display text-xl font-bold text-white mt-1 mb-2">
+              Faltou 1 galão? O tom bate igualzinho.
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Nada pior que precisar repor tinta no meio de uma parede e a cor vir diferente. Nosso sistema tintométrico calibrado grava a fórmula da sua obra para você nunca passar aperto no retoque.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10 text-xs font-bold text-emerald-400">
+            Zero mancha e zero retrabalho
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gradient-to-b from-brand-navy to-brand-navyDark rounded-3xl p-6 border border-brand-yellow/40 shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 inset-x-0 h-1.5 brand-stripes-bar"></div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white/15 text-brand-yellow flex items-center justify-center text-2xl mb-5">🤝</div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-yellow">04 • Agenda Cheia</span>
+            <h3 class="font-display text-xl font-bold text-white mt-1 mb-2">
+              A gente indica clientes pra você.
+            </h3>
+            <p class="text-sm text-blue-100 leading-relaxed">
+              Todo dia entra morador aqui perguntando: <em>"Vocês conhecem um pintor bom e de confiança?"</em>. Pintor parceiro que honra o acabamento entra na nossa vitrine de indicação em Sapiranga.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/15 text-xs font-extrabold text-brand-yellow">
+            Parceria de mão dupla de verdade
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. FERRAMENTA DISRUPTIVA: MONTADOR RELÂMPAGO DE LISTA DE OBRA         -->
+  <!-- ===================================================================== -->
+  <section id="lista-expressa" class="py-16 sm:py-24 px-4 sm:px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-brand-surface border border-white/15 rounded-3xl overflow-hidden shadow-2xl">
+        <div class="h-2 w-full brand-stripes-bar"></div>
+
+        <div class="grid lg:grid-cols-12">
+          <!-- Coluna Esquerda: Botões Grandes "Modo Dedo na Obra" -->
+          <div class="lg:col-span-7 p-6 sm:p-10">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-brand-yellow/15 text-brand-yellow border border-brand-yellow/30">
+                ⚡ Ferramenta Exclusiva para Pintores
+              </span>
+              <button type="button" onclick="clearOrderList()"
+                      class="text-xs font-bold text-slate-400 hover:text-white underline underline-offset-4">
+                Limpar lista
+              </button>
+            </div>
+
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
+              Montador Relâmpago de Lista de Obra
+            </h2>
+            <p class="text-sm text-slate-400 mt-1 mb-6">
+              Tá na obra e sem tempo de digitar textão? Toque nos itens abaixo e mande a cotação pronta pro nosso balcão em 10 segundos.
+            </p>
+
+            <!-- Grade de Itens com Botões Grandes de + e - (Touch-friendly) -->
+            <div id="express-items-grid" class="grid sm:grid-cols-2 gap-3">
+              <!-- Renderizado dinamicamente via JS -->
+            </div>
+
+            <!-- Modo de Retirada / Entrega + Observação rápida -->
+            <div class="mt-6 pt-5 border-t border-white/10 grid sm:grid-cols-2 gap-4">
+              <div>
+                <span class="block text-xs font-bold text-slate-300 mb-2">Como prefere receber?</span>
+                <div class="grid grid-cols-2 gap-2">
+                  <button type="button" onclick="setDeliveryMode('Retirar no Balcão Expresso')" data-mode="Retirar no Balcão Expresso"
+                          class="delivery-btn py-2.5 px-3 rounded-xl text-xs font-extrabold border border-brand-yellow bg-brand-yellow/15 text-brand-yellow transition-all">
+                    🏃 Retirar Rápido
+                  </button>
+                  <button type="button" onclick="setDeliveryMode('Entrega direto na obra')" data-mode="Entrega direto na obra"
+                          class="delivery-btn py-2.5 px-3 rounded-xl text-xs font-extrabold border border-white/10 bg-brand-ink text-slate-300 hover:border-white/30 transition-all">
+                    🚚 Entregar na Obra
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label for="order-notes" class="block text-xs font-bold text-slate-300 mb-2">
+                  Cor, acabamento ou bairro (opcional):
+                </label>
+                <input id="order-notes"
+                       type="text"
+                       placeholder="Ex: Branco Fosco + entrega no Centro"
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-brand-ink border border-white/15 focus:border-brand-yellow focus:outline-none text-white text-xs sm:text-sm placeholder:text-slate-500" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Prancheta de Resumo ao Vivo -->
+          <div class="lg:col-span-5 bg-brand-navyDark p-6 sm:p-10 border-t lg:border-t-0 lg:border-l border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-yellow">Sua Lista Pronta</span>
+                  <h3 class="font-display text-xl font-bold text-white">Prancheta Expressa</h3>
+                </div>
+                <span id="order-total-count" class="px-3 py-1 rounded-full bg-brand-yellow text-brand-ink font-display font-bold text-xs">
+                  0 itens
+                </span>
+              </div>
+
+              <!-- Preview do Pedido -->
+              <div id="order-preview-box" class="bg-brand-ink/70 border border-white/10 rounded-2xl p-4 min-h-[200px] flex flex-col justify-between">
+                <ul id="order-preview-list" class="space-y-2 text-sm text-slate-200">
+                  <!-- Preenchido via JS -->
+                </ul>
+                <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+                  <span>Modo: <strong id="preview-delivery-mode" class="text-white">Retirar no Balcão Expresso</strong></span>
+                  <span class="text-emerald-400 font-bold">● Balcão Online</span>
+                </div>
+              </div>
+
+              <!-- Dica de Profissional -->
+              <div class="mt-4 bg-white/5 border border-white/10 rounded-xl p-3.5 text-xs text-blue-100 leading-relaxed">
+                💡 <strong>Dica:</strong> Se o seu cliente final vai pagar direto na loja, avise no Whats! A gente passa o orçamento limpo pro cliente e garante a sua condição de parceiro.
+              </div>
+            </div>
+
+            <!-- Botão Enviar Lista para WhatsApp -->
+            <div class="mt-6 space-y-2.5">
+              <button onclick="sendExpressOrderWhatsApp()"
+                      class="w-full py-4 px-5 rounded-2xl bg-brand-green hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-brand-green/25 flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5 active:scale-95">
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.391c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.984S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.453 1.344-2 1.422-.516.078-1.188.109-1.906-.125-.438-.141-1-.328-1.719-.641-3.031-1.313-5.016-4.375-5.172-4.578-.156-.203-1.234-1.641-1.234-3.125s.781-2.219 1.063-2.516c.281-.297.609-.375.813-.375h.594c.188 0 .453-.078.703.531.266.641.891 2.188.969 2.344.078.156.125.344.031.547-.094.203-.156.328-.313.5-.156.172-.328.391-.469.516-.156.156-.313.328-.141.625.172.297.766 1.266 1.656 2.047 1.141 1.016 2.109 1.328 2.406 1.484.297.156.469.125.641-.078.172-.203.734-.859.938-1.156.203-.297.391-.25.656-.156.266.094 1.703.797 2 .953.297.156.484.219.563.344.078.125.078.719-.172 1.422z"/></svg>
+                <span>Mandar Lista pro Balcão no Whats</span>
+              </button>
+              <button onclick="openWhatsAppPhotoList()"
+                      class="w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-blue-100 font-bold text-xs transition-colors">
+                📷 Prefere mandar foto do papel ou áudio? Clique aqui
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. SIMULADOR DE TEMPO E GANHO DO PROFISSIONAL + CONDIÇÕES CLARAS      -->
+  <!-- ===================================================================== -->
+  <section id="parceria" class="py-16 sm:py-24 px-4 sm:px-6 bg-slate-950 border-y border-white/10">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 items-center">
+
+      <!-- Esquerda: Simulador de Agilidade (Horas economizadas por mês) -->
+      <div class="lg:col-span-6 bg-brand-surface border border-white/10 rounded-3xl p-6 sm:p-8">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-yellow">A Conta do Autônomo</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1">
+          Quanto tempo você perde por mês correndo atrás de material?
+        </h2>
+        <p class="text-sm text-slate-400 mt-2 mb-6">
+          Arraste para o seu volume médio de obras por mês e veja o impacto real de ter uma loja parceira com estoque e entrega rápida:
+        </p>
+
+        <div class="space-y-6">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="jobs-slider" class="text-sm font-bold text-slate-200">Obras que você toca por mês:</label>
+              <span class="font-display text-2xl font-bold text-brand-yellow"><span id="jobs-count">4</span> obras/mês</span>
+            </div>
+            <input id="jobs-slider" type="range" min="1" max="12" value="4" oninput="updateTimeCalc(this.value)" class="pro-slider w-full" />
+            <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+              <span>1 obra grande</span>
+              <span>4 a 6 obras</span>
+              <span>12+ (equipe)</span>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-brand-ink border border-white/10 rounded-2xl p-4">
+              <p class="text-xs text-slate-400 font-semibold">Tempo salvo no mês (menos fila + menos demão extra)</p>
+              <p class="font-display text-3xl font-bold text-emerald-400 mt-1">+<span id="hours-saved">14</span> horas</p>
+              <p class="text-[11px] text-slate-400 mt-1">Quase <strong id="days-saved" class="text-white">2 diárias</strong> livres pra fechar outra obra!</p>
+            </div>
+            <div class="bg-brand-ink border border-white/10 rounded-2xl p-4">
+              <p class="text-xs text-slate-400 font-semibold">Status recomendado no Clube</p>
+              <p id="tier-label" class="font-display text-2xl font-bold text-brand-yellow mt-1">Parceiro Ativo PRO</p>
+              <p class="text-[11px] text-slate-400 mt-1">Acesso à tabela de parceria + lista de indicações.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direita: 3 Passos Diretos para Ativar a Parceria -->
+      <div class="lg:col-span-6 space-y-5">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-sky-400">Parceria sem letra miúda</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
+          Como funciona o Clube do Pintor no Shopping das Tintas
+        </h2>
+
+        <div class="space-y-4 pt-2">
+          <div class="flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-yellow text-brand-ink font-display font-bold flex items-center justify-center shrink-0">01</div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Cadastro relâmpago no WhatsApp ou balcão</h3>
+              <p class="text-sm text-slate-300 mt-0.5">Você passa seu nome, telefone e área de atuação. Não exige CNPJ — valorizamos o profissional autônomo desde a primeira obra.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-blue text-white font-display font-bold flex items-center justify-center shrink-0">02</div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Condição diferenciada + suporte técnico de fábrica</h3>
+              <p class="text-sm text-slate-300 mt-0.5">Além de condição comercial clara e estoque completo (Killing, Suvinil, Coral, Atlas, Tigre), você tem apoio técnico quando pegar parede difícil ou patologia de infiltração.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-green text-white font-display font-bold flex items-center justify-center shrink-0">03</div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Reconhecimento e indicação de novos clientes</h3>
+              <p class="text-sm text-slate-300 mt-0.5">Pintor parceiro que entrega qualidade vira referência no nosso balcão: quando o cliente final pede recomendação, a gente indica você.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. DEPOIMENTOS DE PINTORES + AUTORIDADE LOCAL (236 AVALIAÇÕES 4,9★)   -->
+  <!-- ===================================================================== -->
+  <section id="depoimentos" class="py-16 sm:py-24 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Quem vive da pintura recomenda</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-1">
+            Respeito se conquista no balcão, todo dia.
+          </h2>
+        </div>
+        <div class="inline-flex items-center gap-3 bg-brand-surface border border-white/10 px-4 py-2.5 rounded-2xl self-start">
+          <span class="font-display text-2xl font-bold text-brand-yellow">4,9★</span>
+          <div class="text-xs leading-tight">
+            <p class="font-bold text-white">236 avaliações no Google</p>
+            <p class="text-slate-400">TOP 10 Revendas Killing RS</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Depoimento 1 -->
+        <div class="bg-brand-surface border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-yellow text-xs mb-3">★★★★★</div>
+            <p class="text-sm text-slate-200 leading-relaxed">
+              "Trabalho há 12 anos como pintor autônomo em Sapiranga. O que me segura no Shopping das Tintas é a agilidade: mando a lista de manhã, quando passo lá já tá tudo pronto e a cor nunca vem diferente no retoque."
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-blue/25 text-sky-300 font-bold text-sm flex items-center justify-center">RS</div>
+            <div>
+              <p class="text-sm font-bold text-white">Rogério S.</p>
+              <p class="text-[11px] text-slate-400">Pintor Residencial • Parceiro há 5 anos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-brand-surface border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-yellow text-xs mb-3">★★★★★</div>
+            <p class="text-sm text-slate-200 leading-relaxed">
+              "Já fechei várias obras só de indicação que veio da loja. Além da condição boa pra parceiro, eles explicam pro meu cliente por que vale a pena usar tinta de qualidade, o que facilita muito o meu serviço."
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-green/25 text-emerald-300 font-bold text-sm flex items-center justify-center">AF</div>
+            <div>
+              <p class="text-sm font-bold text-white">Anderson F.</p>
+              <p class="text-[11px] text-slate-400">Pintura e Texturas • Sapiranga/RS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-brand-surface border border-white/10 rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-yellow text-xs mb-3">★★★★★</div>
+            <p class="text-sm text-slate-200 leading-relaxed">
+              "Na hora do aperto quando falta massa ou selador no meio da tarde, a entrega deles salva o dia da equipe. Atendimento nota 10, pessoal entende de tinta de verdade e não fica enrolando."
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-yellow/20 text-brand-yellow font-bold text-sm flex items-center justify-center">CL</div>
+            <div>
+              <p class="text-sm font-bold text-white">Cláudio L.</p>
+              <p class="text-[11px] text-slate-400">Equipe de Pintura Predial e Obras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de marcas parceiras (foco em rendimento e acessórios de obra) -->
+      <div class="mt-10 bg-white/5 border border-white/10 rounded-2xl px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-slate-400">
+          Estoque pronto com marcas que o pintor confia:
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-display font-bold text-sm sm:text-base text-slate-200">
+          <span class="px-3 py-1 rounded-lg bg-brand-yellow/15 text-brand-yellow border border-brand-yellow/30">KILLING <span class="text-[10px] font-sans ml-1">TOP 10 RS</span></span>
+          <span class="opacity-75">SUVINIL</span>
+          <span class="opacity-75">CORAL</span>
+          <span class="opacity-75">ATLAS</span>
+          <span class="opacity-75">TIGRE</span>
+          <span class="opacity-75">ANJO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 8. FAQ DO PINTOR PROFISSIONAL (SEO LOCAL + IAs)                       -->
+  <!-- ===================================================================== -->
+  <section id="faq" class="py-16 px-4 sm:px-6 bg-slate-950 border-t border-white/10">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Dúvidas Frequentes</span>
+        <h2 class="font-display text-3xl font-bold text-white mt-1">
+          Perguntas comuns dos pintores parceiros
+        </h2>
+      </div>
+
+      <div class="space-y-3" id="faq-pro-accordion">
+        <div class="faq-item border border-white/10 rounded-2xl overflow-hidden bg-brand-surface">
+          <button type="button" onclick="toggleFaqPro(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base">
+            <span>Sou pintor autônomo (sem CNPJ). Posso entrar na parceria?</span>
+            <span class="faq-icon text-brand-yellow text-xl font-bold">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed">
+            Com certeza! Grande parte dos nossos parceiros são pintores autônomos e profissionais liberais. Você pode se cadastrar no CPF, MEI ou CNPJ sem custo nenhum e já começar a usar as vantagens.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/10 rounded-2xl overflow-hidden bg-brand-surface">
+          <button type="button" onclick="toggleFaqPro(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base">
+            <span>Se o meu cliente final for pagar direto na loja, eu continuo com meus benefícios?</span>
+            <span class="faq-icon text-brand-yellow text-xl font-bold">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed">
+            Sim! Basta avisar nossa equipe no WhatsApp <strong>(51) 99261-1901</strong> ou mandar o cliente falando que veio por sua indicação. Nós cuidamos do atendimento com respeito ao seu trabalho e registramos tudo certinho na sua conta de parceiro.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/10 rounded-2xl overflow-hidden bg-brand-surface">
+          <button type="button" onclick="toggleFaqPro(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base">
+            <span>Vocês entregam material direto na obra em Sapiranga?</span>
+            <span class="faq-icon text-brand-yellow text-xl font-bold">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed">
+            Sim! Fazemos entrega ágil em Sapiranga e combinamos rotas na região para você não precisar largar o rolo no meio do expediente. E se preferir retirar, o Balcão Expresso já deixa seu pedido separado.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/10 rounded-2xl overflow-hidden bg-brand-surface">
+          <button type="button" onclick="toggleFaqPro(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base">
+            <span>Como faço para ser indicado para clientes finais da loja?</span>
+            <span class="faq-icon text-brand-yellow text-xl font-bold">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed">
+            Ao ativar sua parceria e trabalhar junto com a loja, você passa a compor nossa rede de profissionais de confiança. Quando moradores chegam precisando de pintor residencial, comercial ou de fachada, conectamos com os parceiros ativos de acordo com a especialidade.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 9. RODAPÉ LOCAL LEVE                                                  -->
+  <!-- ===================================================================== -->
+  <footer class="bg-brand-ink text-slate-300 pt-14 pb-12 px-4 sm:px-6 border-t border-white/10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 pb-10 border-b border-white/10">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-navy border border-white/15 flex items-center justify-center">
+            <svg viewBox="0 0 64 64" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 8 H24 V27 L20 29 Z" fill="#1F78C1"/>
+              <path d="M24 8 H28 V25 L24 27 Z" fill="#E1252B"/>
+              <path d="M28 8 H32 V23 L28 25 Z" fill="#FBB024"/>
+              <path d="M32 8 H36 V25 L32 23 Z" fill="#1F78C1"/>
+              <path d="M36 8 H40 V27 L36 25 Z" fill="#009A44"/>
+              <path d="M40 8 H44 V29 L40 27 Z" fill="#E1252B"/>
+              <path d="M16 32 L32 24.5 L48 32 L46 35 L32 28.5 L18 35 Z" fill="#FFFFFF"/>
+              <path d="M20 35.5 L32 30 L44 35.5 L43 39.5 C39 40.5 36.5 43.5 36.5 48 C36.5 52.5 35.5 56 32 58.5 C28.5 56 27.5 52.5 27.5 48 C27.5 43.5 25 40.5 21 39.5 Z" fill="#FFFFFF"/>
+              <circle cx="32" cy="52" r="2.2" fill="#004282"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-display font-bold text-lg text-white leading-none">Shopping das Tintas</p>
+            <p class="text-[11px] text-brand-yellow font-bold tracking-wider uppercase mt-0.5">Clube Pintor Parceiro • 16 Anos</p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed max-w-xs">
+          A casa do pintor profissional em Sapiranga/RS. TOP 10 revendas Killing do RS e nota 4,9 no Google com 236 avaliações.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-3">Balcão Expresso & Loja</h4>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li>📍 Sapiranga / RS</li>
+          <li>📱 WhatsApp Direto: <strong class="text-white">(51) 99261-1901</strong></li>
+          <li>🕒 Seg a Sex: 08h às 18h • Sáb: 08h às 12h</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col items-start md:items-end justify-center gap-3">
+        <button onclick="openWhatsAppPartnership('footer_pro')"
+                class="px-5 py-3 rounded-xl bg-brand-yellow hover:bg-amber-400 text-brand-ink font-extrabold text-sm transition-colors">
+          🤝 Ativar Parceria de Pintor no WhatsApp
+        </button>
+        <a href="https://www.google.com/maps/search/?api=1&query=Shopping+das+Tintas+Sapiranga+RS"
+           target="_blank" rel="noopener noreferrer"
+           class="text-xs font-bold text-slate-400 hover:text-white underline underline-offset-4">
+          Traçar rota até a loja no Google Maps ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+      <p>© 2026 Shopping das Tintas — Todos os direitos reservados.</p>
+      <p>Estratégia & Experiência Digital • Gentte</p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- 10. FAIXA FLUTUANTE PERSISTENTE: BALCÃO EXPRESSO DO PINTOR            -->
+  <!-- ===================================================================== -->
+  <div class="fixed bottom-3 inset-x-3 sm:inset-x-6 z-50 pointer-events-none">
+    <div class="max-w-4xl mx-auto pointer-events-auto bg-brand-surface/95 backdrop-blur-lg text-white rounded-2xl shadow-2xl shadow-black/60 border border-brand-yellow/35 overflow-hidden">
+      <div class="h-1.5 w-full brand-stripes-bar"></div>
+      <div class="px-4 sm:px-5 py-3 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-10 h-10 rounded-xl bg-brand-yellow text-brand-ink flex items-center justify-center text-lg font-extrabold shrink-0">
+            ⚡
+          </div>
+          <div class="min-w-0">
+            <p class="text-[11px] font-extrabold uppercase tracking-wider text-brand-yellow truncate">
+              Clube do Pintor • Sapiranga/RS
+            </p>
+            <p class="text-xs sm:text-sm font-semibold text-white truncate">
+              Condição de parceiro + cotação relâmpago direto no balcão
+            </p>
+          </div>
+        </div>
+
+        <button onclick="openWhatsAppExpress('faixa_flutuante_pintor')"
+                class="shrink-0 inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-brand-green hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-95">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.391c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.984S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.453 1.344-2 1.422-.516.078-1.188.109-1.906-.125-.438-.141-1-.328-1.719-.641-3.031-1.313-5.016-4.375-5.172-4.578-.156-.203-1.234-1.641-1.234-3.125s.781-2.219 1.063-2.516c.281-.297.609-.375.813-.375h.594c.188 0 .453-.078.703.531.266.641.891 2.188.969 2.344.078.156.125.344.031.547-.094.203-.156.328-.313.5-.156.172-.328.391-.469.516-.156.156-.313.328-.141.625.172.297.766 1.266 1.656 2.047 1.141 1.016 2.109 1.328 2.406 1.484.297.156.469.125.641-.078.172-.203.734-.859.938-1.156.203-.297.391-.25.656-.156.266.094 1.703.797 2 .953.297.156.484.219.563.344.078.125.078.719-.172 1.422z"/></svg>
+          <span class="hidden sm:inline">Chamar Balcão Expresso</span>
+          <span class="sm:hidden">Whats PRO</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast discreto (substitui qualquer alert) -->
+  <div id="pro-toast" class="fixed top-20 right-4 z-50 hidden bg-brand-yellow text-brand-ink px-4 py-3 rounded-xl shadow-2xl font-extrabold text-xs flex items-center gap-2 max-w-xs">
+    <span>⚡</span>
+    <span id="pro-toast-msg">Abrindo WhatsApp do Balcão Expresso...</span>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT: CREDENCIAL VIP, LISTA EXPRESSA, SIMULADOR & GTM/GA4       -->
+  <!-- ===================================================================== -->
+  <script>
+    const WHATSAPP_NUMBER = '5551992611901'; // +55 51 99261-1901
+    window.dataLayer = window.dataLayer || [];
+
+    // Captura de UTMs para atribuir campanhas do Mês 2
+    function getUtmTag() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const source = params.get('utm_source');
+        const campaign = params.get('utm_campaign');
+        if (source || campaign) {
+          return ` [Origem: ${source || 'direto'}${campaign ? ' / ' + campaign : ''}]`;
+        }
+      } catch (e) {}
+      return '';
+    }
+
+    // Disparo estruturado para GTM / GA4 (público: pintor)
+    function trackProEvent(eventName, payload = {}) {
+      try {
+        window.dataLayer.push({
+          event: eventName,
+          audience: 'pintor',
+          page_type: 'lp_pintor',
+          ...payload
+        });
+      } catch (e) {
+        console.error('Erro dataLayer:', e);
+      }
+    }
+
+    // Toast visual elegante
+    let toastTimer;
+    function showProToast(text) {
+      const box = document.getElementById('pro-toast');
+      const msg = document.getElementById('pro-toast-msg');
+      if (!box || !msg) return;
+      msg.textContent = text;
+      box.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => box.classList.add('hidden'), 3200);
+    }
+
+    function launchWhatsAppPro(message, originLabel) {
+      const fullMsg = message + getUtmTag();
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMsg)}`;
+      trackProEvent('whatsapp_conversion_pintor', {
+        cta_origin: originLabel,
+        specialty: painterState.specialty,
+        express_items_count: getTotalExpressItems()
+      });
+      showProToast('Abrindo WhatsApp do Balcão Expresso...');
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    // =========================================================================
+    // 1. GERADOR AO VIVO DE CREDENCIAL VIP DO PINTOR
+    // =========================================================================
+    const painterState = {
+      name: '',
+      specialty: 'Pintura Residencial'
+    };
+
+    function updateVipCard() {
+      const input = document.getElementById('input-painter-name');
+      const cardName = document.getElementById('card-painter-name');
+      if (!input || !cardName) return;
+
+      const cleanVal = input.value.trim();
+      painterState.name = cleanVal;
+      cardName.textContent = cleanVal ? cleanVal.toUpperCase() : 'SEU NOME AQUI';
+    }
+
+    function setSpecialty(spec) {
+      painterState.specialty = spec;
+      const badge = document.getElementById('card-specialty-badge');
+      if (badge) badge.textContent = spec;
+
+      document.querySelectorAll('.spec-btn').forEach(btn => {
+        const active = btn.dataset.spec === spec;
+        btn.classList.toggle('border-brand-yellow', active);
+        btn.classList.toggle('bg-brand-yellow/15', active);
+        btn.classList.toggle('text-brand-yellow', active);
+        btn.classList.toggle('border-white/10', !active);
+        btn.classList.toggle('bg-white/5', !active);
+        btn.classList.toggle('text-slate-300', !active);
+      });
+
+      trackProEvent('painter_card_specialty', { specialty: spec });
+    }
+
+    function openWhatsAppCard() {
+      const displayName = painterState.name || 'Pintor Profissional';
+      const msg = `Olá, Shopping das Tintas! 🛠️ Sou *${displayName}* (atuação: *${painterState.specialty}*) e emiti minha pré-credencial no site.\n\nQuero ativar meu cadastro de *Pintor Parceiro* para ter acesso às condições especiais, balcão expresso e rede de indicações em Sapiranga!`;
+      launchWhatsAppPro(msg, 'credencial_vip_hero');
+    }
+
+    // =========================================================================
+    // 2. MONTADOR RELÂMPAGO DE LISTA DE OBRA (TOUCH-FRIENDLY)
+    // =========================================================================
+    const EXPRESS_CATALOG = [
+      { id: 'lata18', name: 'Tinta Acrílica 18L', sub: 'Lata grande', icon: '🪣', qty: 1 },
+      { id: 'galao36', name: 'Tinta Acrílica 3,6L', sub: 'Galão (branco ou cor)', icon: '🎨', qty: 0 },
+      { id: 'massa', name: 'Massa Corrida / Acrílica', sub: 'Barrica / Balde', icon: '🧱', qty: 1 },
+      { id: 'selador', name: 'Selador / Fundo Preparador', sub: '18L ou 3,6L', icon: '🛡️', qty: 0 },
+      { id: 'esmalte', name: 'Esmalte Madeira/Metal', sub: '3,6L ou 900ml', icon: '🚪', qty: 0 },
+      { id: 'rolo', name: 'Rolo Antigotas + Cabo', sub: 'Atlas / Tigre', icon: '🖌️', qty: 0 },
+      { id: 'fita', name: 'Fita Crepe Automotiva/Obra', sub: 'Unidades', icon: '📏', qty: 2 },
+      { id: 'lixa', name: 'Lixas + Lona Plástica', sub: 'Kit preparação', icon: '📦', qty: 0 }
+    ];
+
+    let deliveryMode = 'Retirar no Balcão Expresso';
+
+    function renderExpressItems() {
+      const grid = document.getElementById('express-items-grid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      EXPRESS_CATALOG.forEach((item, index) => {
+        const hasQty = item.qty > 0;
+        const card = document.createElement('div');
+        card.className = `rounded-2xl p-3.5 border transition-all flex items-center justify-between gap-2 ${
+          hasQty
+            ? 'bg-brand-navy/60 border-brand-yellow/60 shadow-md'
+            : 'bg-brand-ink/70 border-white/10 hover:border-white/25'
+        }`;
+
+        card.innerHTML = `
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="text-xl shrink-0">${item.icon}</span>
+            <div class="min-w-0">
+              <p class="text-xs sm:text-sm font-bold text-white truncate">${item.name}</p>
+              <p class="text-[11px] text-slate-400 truncate">${item.sub}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" onclick="adjustExpressItem(${index}, -1)" aria-label="Diminuir ${item.name}"
+                    class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white font-extrabold text-base flex items-center justify-center active:scale-90 transition-transform">−</button>
+            <span class="w-6 text-center font-display font-bold text-sm ${hasQty ? 'text-brand-yellow' : 'text-slate-500'}">${item.qty}</span>
+            <button type="button" onclick="adjustExpressItem(${index}, 1)" aria-label="Adicionar ${item.name}"
+                    class="w-8 h-8 rounded-lg bg-brand-yellow hover:bg-amber-400 text-brand-ink font-extrabold text-base flex items-center justify-center active:scale-90 transition-transform">+</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      renderOrderPreview();
+    }
+
+    function adjustExpressItem(index, delta) {
+      const item = EXPRESS_CATALOG[index];
+      if (!item) return;
+      item.qty = Math.max(0, Math.min(50, item.qty + delta));
+      renderExpressItems();
+    }
+
+    function clearOrderList() {
+      EXPRESS_CATALOG.forEach(item => { item.qty = 0; });
+      const notes = document.getElementById('order-notes');
+      if (notes) notes.value = '';
+      renderExpressItems();
+      showProToast('Lista limpa! Toque nos itens para montar novamente.');
+    }
+
+    function setDeliveryMode(mode) {
+      deliveryMode = mode;
+      const preview = document.getElementById('preview-delivery-mode');
+      if (preview) preview.textContent = mode;
+
+      document.querySelectorAll('.delivery-btn').forEach(btn => {
+        const active = btn.dataset.mode === mode;
+        btn.classList.toggle('border-brand-yellow', active);
+        btn.classList.toggle('bg-brand-yellow/15', active);
+        btn.classList.toggle('text-brand-yellow', active);
+        btn.classList.toggle('border-white/10', !active);
+        btn.classList.toggle('bg-brand-ink', !active);
+        btn.classList.toggle('text-slate-300', !active);
+      });
+    }
+
+    function getTotalExpressItems() {
+      return EXPRESS_CATALOG.reduce((sum, item) => sum + item.qty, 0);
+    }
+
+    function renderOrderPreview() {
+      const listEl = document.getElementById('order-preview-list');
+      const countBadge = document.getElementById('order-total-count');
+      if (!listEl || !countBadge) return;
+
+      const selected = EXPRESS_CATALOG.filter(i => i.qty > 0);
+      const total = getTotalExpressItems();
+      countBadge.textContent = `${total} ${total === 1 ? 'item' : 'itens'}`;
+
+      if (selected.length === 0) {
+        listEl.innerHTML = `<li class="text-slate-500 text-xs italic py-6 text-center">Toque no botão "+" ao lado para montar sua lista de obra em segundos...</li>`;
+        return;
+      }
+
+      listEl.innerHTML = selected.map(item => `
+        <li class="flex items-center justify-between gap-2 pb-2 border-b border-white/5 last:border-0">
+          <span class="font-semibold text-white">${item.icon} ${item.name}</span>
+          <span class="px-2 py-0.5 rounded-md bg-brand-yellow/15 text-brand-yellow font-display font-bold text-xs">${item.qty}x</span>
+        </li>
+      `).join('');
+    }
+
+    function sendExpressOrderWhatsApp() {
+      const selected = EXPRESS_CATALOG.filter(i => i.qty > 0);
+      const notes = (document.getElementById('order-notes')?.value || '').trim();
+      const painterHeader = painterState.name ? `Sou *${painterState.name}* (Pintor)` : 'Sou *Pintor Profissional*';
+
+      let msg = `Olá, Balcão Expresso do Shopping das Tintas! ⚡\n${painterHeader} e montei essa lista rápida pelo site:\n\n`;
+
+      if (selected.length > 0) {
+        selected.forEach(item => {
+          msg += `• ${item.qty}x ${item.name}\n`;
+        });
+      } else {
+        msg += `• Quero passar minha lista de obra para cotação de parceiro.\n`;
+      }
+
+      msg += `\n📦 Preferência: *${deliveryMode}*`;
+      if (notes) {
+        msg += `\n📝 Obs/Cor/Bairro: ${notes}`;
+      }
+      msg += `\n\nConseguem ver o valor de parceiro e disponibilidade pra mim?`;
+
+      launchWhatsAppPro(msg, 'montador_lista_expressa');
+    }
+
+    function openWhatsAppPhotoList() {
+      const msg = `Olá, Shopping das Tintas! 📷 Sou pintor e prefiro mandar a *foto da minha lista de obra* (ou áudio) por aqui para cotação rápida no Balcão Expresso.`;
+      launchWhatsAppPro(msg, 'foto_lista_obra');
+    }
+
+    // =========================================================================
+    // 3. SIMULADOR DE TEMPO ECONOMIZADO DO AUTÔNOMO
+    // =========================================================================
+    function updateTimeCalc(val) {
+      const jobs = parseInt(val, 10) || 4;
+      const hours = Math.round(jobs * 3.5); // média realista de deslocamento/fila + retrabalho evitado por obra
+      const days = (hours / 8).toFixed(1).replace('.', ',');
+
+      document.getElementById('jobs-count').textContent = jobs;
+      document.getElementById('hours-saved').textContent = hours;
+      document.getElementById('days-saved').textContent = `${days} diárias`;
+
+      const tier = document.getElementById('tier-label');
+      if (jobs <= 2) {
+        tier.textContent = 'Parceiro Autônomo';
+      } else if (jobs <= 6) {
+        tier.textContent = 'Parceiro Ativo PRO';
+      } else {
+        tier.textContent = 'Equipe VIP Ouro';
+      }
+    }
+
+    // =========================================================================
+    // 4. OUTROS ATALHOS WHATSAPP, FAQ E BARRA DE SCROLL
+    // =========================================================================
+    function openWhatsAppPartnership(origin) {
+      const msg = `Olá, Shopping das Tintas! 🛠️ Sou pintor profissional e quero conhecer as vantagens e ativar meu cadastro de *Pintor Parceiro* em Sapiranga.`;
+      launchWhatsAppPro(msg, origin);
+    }
+
+    function openWhatsAppExpress(origin) {
+      const msg = `Olá, Balcão Expresso do Shopping das Tintas! ⚡ Sou pintor profissional e preciso fazer uma cotação rápida / verificar estoque.`;
+      launchWhatsAppPro(msg, origin);
+    }
+
+    function toggleFaqPro(button) {
+      const item = button.closest('.faq-item');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      document.querySelectorAll('#faq-pro-accordion .faq-item').forEach(other => {
+        other.querySelector('.faq-content').classList.add('hidden');
+        other.querySelector('.faq-icon').textContent = '+';
+      });
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = '−';
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('scroll-pro-bar');
+      if (!bar) return;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      bar.style.width = `${progress}%`;
+    }, { passive: true });
+
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+      renderExpressItems();
+      updateTimeCalc(4);
+    });
+  </script>
+</body>
+</html>
